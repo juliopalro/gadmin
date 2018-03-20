@@ -1,0 +1,41 @@
+{
+  "name": "gadmin",
+  "version": "1.0.0",
+  "description": "Dashboard admin with Bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "live-server": "live-server --watch=./public --open=./public ",
+    "sass-watch": "gulp app-sass:watch",
+    "js-watch": "gulp app-js:watch",
+    "html-watch": "gulp build-html:watch",
+    "build": "gulp build",
+    "dev": "concurrently \"npm run html-watch\" \"npm run js-watch\" \"npm run sass-watch\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliopalro/gadmin.git"
+  },
+  "keywords": [],
+  "author": "Julio César Palacios Rojas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juliopalro/gadmin/issues"
+  },
+  "homepage": "https://github.com/juliopalro/gadmin#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "concurrently": "^3.5.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "jquery": "1.9.1 - 3",
+    "live-server": "^1.2.0",
+    "popper.js": "^1.14.1",
+    "pump": "^3.0.0"
+  }
+}
