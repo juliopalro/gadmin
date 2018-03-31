@@ -1,20 +1,63 @@
-$maxWidthLleftPanel: 280px
-$maxHeightTitle: 65px
+$maxWidthLleftPanel: 250px
+$minWidthLleftPanel: 70px
+$maxHeightTitle: 56px
 #gadmin
-  #leftPanel
+  .leftPanel
     background-color: $white
     height: 100%
     position: fixed
     width: $maxWidthLleftPanel
+    max-width: $maxWidthLleftPanel
     border-right: 1px solid $gray-300
-    .title-name
+    overflow: hidden
+    top: 0
+    z-index: 1000
+    @include transitionAll(.2s, ease)
+    .title
       background-color: $white
+      height: $maxHeightTitle
       max-height: $maxHeightTitle
       border-bottom: 1px solid $gray-300
-      h5
+      .title-name, .title-ico
         text-align: center
         font-size: 1rem
         letter-spacing: .5px
         font-weight: 500
         color: $blue
         line-height: $maxHeightTitle
+      .title-ico
+        display: none
+    .nav
+      height: 100%
+      a
+        border-right: 4px solid transparent
+        color: $gray-700
+        font-size: 15px
+        &.active, &:hover
+          // background-color: $gray-200
+          border-right: 4px solid $primary
+        svg
+          font-size: 1rem
+          color: opacify($primary, 0.1)
+        span
+          margin-left: .5rem
+      .nav
+        background-color: $gray-100
+        .nav-link
+          padding-left: 2rem
+  .leftPanelIco
+    max-width: $minWidthLleftPanel !important
+    .title
+      .title-name
+        display: none
+      .title-ico
+        display: block
+    .nav
+      li.nav-item
+        text-align: center
+      a
+        overflow: inherit
+        svg
+          font-size: 2rem
+        .nav-link-text
+          display: none

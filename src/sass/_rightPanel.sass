@@ -1,12 +1,17 @@
 #gadmin
-  #rightPanel
-    background-color: opacify($gray-100, .05);
+  .rightPanel
+    // background-color: opacify($gray-100, .05)
     height: 100%
     position: fixed
     width: calc( 100% - #{$maxWidthLleftPanel})
+    max-width: calc( 100% - #{$maxWidthLleftPanel})
     margin-left: $maxWidthLleftPanel
     .top-menu
       background-color: $white
       max-height: $maxHeightTitle
       height: $maxHeightTitle
       border-bottom: 1px solid $gray-300
+  .rightPanelIco
+    width: calc( 100% - #{$minWidthLleftPanel}) !important
+    max-width: calc( 100% - #{$minWidthLleftPanel}) !important
+    margin-left: $minWidthLleftPanel
