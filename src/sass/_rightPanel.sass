@@ -11,6 +11,24 @@
       max-height: $maxHeightTitle
       height: $maxHeightTitle
       border-bottom: 1px solid $gray-300
+      .navbar
+        .navLeftToggler
+          padding: .25rem .75rem
+          font-size: 1.25rem
+          border: 1px solid rgba(255, 255, 255, .1)
+          border-radius: .25rem
+          background-color: $white
+          color: $blue
+          &.active
+            background-color: $blue
+            color: $white
+        button.navbar-toggler
+          background-color: $white
+          color: $blue
+          &.collapsed
+            background-color: transparent
+            color: $white
+
   .rightPanelIco
     width: calc( 100% - #{$minWidthLleftPanel}) !important
     max-width: calc( 100% - #{$minWidthLleftPanel}) !important
