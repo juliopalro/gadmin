@@ -14,15 +14,18 @@ $maxHeightTitle: 56px
     +transition(margin-left, 0s , linear)
     .leftMenu
       background-color: $white
-      .title-dashboard
-        border-bottom: 1px solid $gray-200
-        padding: 15px 0 10px 0
-        min-height: 56px
-        .title-ico
-          color: $primary
+      height: 100%
+      border-right: 4px solid $gray-200
+    .title-dashboard
+      border-bottom: 1px solid $gray-200
+      padding: 15px 0 10px 0
+      min-height: 56px
+      .title-ico
+        color: $primary
     .menu-primary
       .nav-link
         border-right: 4px solid transparent
+        margin-right: -4px
         color: $secondary
         padding: 10px 16px 10px 0
         .nav-link-ico
@@ -74,10 +77,9 @@ $maxHeightTitle: 56px
     .leftMenu
       width: 50% !important
       height: 100% !important
-      +shadowBox(3px, 0px, 20px, $gray-700)
-      .title-dashboard
-        .title-ico
-          display: none
+    .title-dashboard
+      .title-ico
+        display: none
     &.hiddenLarge
       .title-dashboard
         .title-ico
@@ -87,8 +89,8 @@ $maxHeightTitle: 56px
 
 @media (max-width: 575.98px)
   .leftPanel
-    #leftMenu
+    .leftMenu
       width: 60% !important
-      .title-dashboard
-        .title-ico
-          display: none
+    .title-dashboard
+      .title-ico
+        display: none
