@@ -1,5 +1,6 @@
-@mixin transitionAll( $time, $type )
-  -o-transition: all $time $type
-  -moz-transition: all $time $type
-  -webkit-transition: all $time $type
-  transition: all $time $type
+=transition($label, $time, $type)
+  -moz-transition: $label $time $type
+  -ms-transition: $label $time $type
+  -o-transition: $label $time $type
+  -webkit-transition: $label $time $type
+  transition: $label $time $type

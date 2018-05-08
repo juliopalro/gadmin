@@ -11,35 +11,80 @@
   <div id="gadmin" class="gadmin">
 
     <div id="leftPanel" class="leftPanel">
-      <div class="title">
-        <h5 class="title-name">Gadmin</h5>
-        <h5 class="title-ico">GD</h5>
+      <div id="leftMenu" class="leftMenu">
+        <h5 class="title-dashboard text-center m-0">
+          <span class="title-ico">GD</span>
+          <span class="title-name">Gadmin</span>
+        </h5>
+        <ul class="nav flex-column menu-primary">
+          <li class="nav-item">
+            <a class="nav-link active text-truncate" href="#">
+              <i class="fas fa-home nav-link-ico text-primary"></i>
+              <span class="nav-link-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-truncate" href="#">
+              <i class="fas fa-chart-pie nav-link-ico text-warning"></i>
+              <span class="nav-link-text">Charts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-truncate" href="#">
+              <i class="fas fa-th-list nav-link-ico text-info"></i>
+              <span class="nav-link-text">Widgets</span>
+            </a>
+          </li>
+          <li class="nav-item nav-list">
+            <a class="nav-link text-truncate" href="#">
+              <i class="fas fa-quidditch nav-link-ico text-danger"></i>
+              <span class="nav-link-text">UI Elements</span>
+            </a>
+            <ul class="nav flex-column nav-secondary">
+              <li class="nav-item">
+                <a class="nav-link text-truncate" href="#">
+                  <span class="nav-link-text">Cards</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-truncate" href="#">
+              <i class="fas fa-list-alt nav-link-ico text-success"></i>
+              <span class="nav-link-text">Forms</span>
+            </a>
+          </li>
+          <li class="nav-item nav-list hidden-list">
+            <a class="nav-link text-truncate" href="#">
+              <i class="fas fa-table nav-link-ico text-danger"></i>
+              <span class="nav-link-text">Tables</span>
+            </a>
+            <ul class="nav flex-column nav-secondary">
+              <li class="nav-item">
+                <a class="nav-link text-truncate" href="#">
+                  <span class="nav-link-text">Default</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active text-truncate" href="#">
-            <i class="fas fa-clipboard-list"></i>
-            <span class="nav-link-text">Registros fghjbfgh fghn fghn s fb dfn dgfn</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-truncate" href="#">
-            <i class="fas fa-book"></i>
-            <span class="nav-link-text">Prestamos</span>
-          </a>
-        </li>
-      </ul>
-
     </div>
+
+
 
     <div id="rightPanel" class="rightPanel">
       <div class="top-menu">
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-          <button class="navLeftToggler" type="button" data-toggle="collapse">
+          <button class="navLeftToggler d-none d-md-block" type="button">
             <i class="fas fa-th-list fa-lg"></i>
           </button>
-          <span class="navbar-brand d-none d-sm-block d-md-none">Módulo</span>
+          <button class="navLeftToggleSmall active d-block d-md-none" type="button">
+            <i class="fas fa-th-list fa-lg"></i>
+          </button>
+          <span class="navbar-brand d-none d-sm-block d-md-none">
+            <b class="text-white">GD</b> Módulo
+          </span>
           <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavTopDropdown" aria-controls="navbarNavTopDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars fa-lg"></i>
           </button>

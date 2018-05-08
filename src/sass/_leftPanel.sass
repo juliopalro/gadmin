@@ -3,61 +3,76 @@ $minWidthLleftPanel: 70px
 $maxHeightTitle: 56px
 #gadmin
   .leftPanel
-    background-color: $white
     height: 100%
+    width: 100%
     position: fixed
     width: $maxWidthLleftPanel
-    max-width: $maxWidthLleftPanel
-    border-right: 1px solid $gray-300
     overflow: hidden
     top: 0
     z-index: 1000
-    @include transitionAll(.2s, ease)
-    .title
+    +transition(margin-left, 0.4s , linear)
+    &.hiddenSmall
+      margin-left: -100% !important
+      background-color: transparent !important
+    .leftMenu
       background-color: $white
-      height: $maxHeightTitle
-      max-height: $maxHeightTitle
-      border-bottom: 1px solid $gray-300
-      .title-name, .title-ico
-        text-align: center
-        font-size: 1rem
-        letter-spacing: .5px
-        font-weight: 500
-        color: $blue
-        line-height: $maxHeightTitle
-      .title-ico
-        display: none
-    .nav
-      height: 100%
-      a
+      .title-dashboard
+        border-bottom: 1px solid $gray-200
+        padding: 10px 0
+        .title-ico
+          color: $primary
+    .menu-primary
+      .nav-link
         border-right: 4px solid transparent
-        color: $gray-700
-        font-size: 15px
-        &.active, &:hover
-          background-color: $gray-100
-          border-right: 4px solid $primary
-        svg
-          font-size: 1rem
-          color: opacify($primary, 0.1)
-        span
-          margin-left: .5rem
-      .nav
-        background-color: $gray-200
-        .nav-link
-          padding-left: 2rem
-  .leftPanelIco
-    max-width: $minWidthLleftPanel !important
-    .title
-      .title-name
-        display: none
-      .title-ico
-        display: block
-    .nav
-      li.nav-item
-        text-align: center
-      a
-        overflow: inherit
-        svg
-          font-size: 2rem
+        color: $secondary
+        padding: 10px 16px
+        .nav-link-ico
+          font-size: 1.5rem
+          width: 27px
         .nav-link-text
+          font-weight: 500
+          margin-left: 10px
+        &:hover, &.active
+          color: $gray-900
+          border-right: 4px solid $primary
+          background-color: $gray-100
+      .nav-list
+        >.nav-link
+          position: relative
+          &::after
+            content: "<"
+            font-size: 22px
+            font-weight: 500
+            position: absolute
+            right: 15px
+            +rotate(90deg)
+        .nav-secondary
+          background-color: $gray-100
+          overflow: hidden
+        &.hidden-list
+          >.nav-link
+            &::after
+              +rotate(-90deg)
+          .nav-secondary
+            height: 0
+
+@media (max-width: 767.98px)
+  .leftPanel
+    width: 100% !important
+    height: 100% !important
+    top: 0
+    .leftMenu
+      width: 50% !important
+      height: 100% !important
+      +shadowBox(3px, 0px, 20px, $gray-700)
+      .title-dashboard
+        .title-ico
+          display: none
+
+@media (max-width: 575.98px)
+  .leftPanel
+    #leftMenu
+      width: 60% !important
+      .title-dashboard
+        .title-ico
           display: none
