@@ -1,0 +1,38 @@
+.card-module
+  position: relative
+  overflow: hidden
+  max-height: 150px
+  height: 135px
+  .card-body
+    z-index: 2
+    padding-right: 90px
+    padding-bottom: 0
+  .card-icon
+    height: 125px
+    width: 120px
+    position: absolute
+    bottom: 0
+    right: 0
+    border-left: 5px solid rgba(0, 0, 0, 0.05) !important
+    border-top: 5px solid rgba(0, 0, 0, 0.05) !important
+    border-radius: 100% 0 0 0
+    &:after
+      background-image: url("")
+      border-radius: 100% 0 0 0
+      bottom: 0
+      content: ''
+      display: block
+      left: 0
+      opacity: .15
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 0
+    svg
+      position: absolute
+      right: 10px
+      bottom: 10px
+      transition: transform 1s ease-in-out
+  &:hover
+    .card-icon svg
+      transform: scale(1.1)

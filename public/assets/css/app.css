@@ -106,7 +106,7 @@
   position: fixed;
   width: calc( 100% - 250px);
   margin-left: 250px;
-  background-color: #f9fafb; }
+  background-color: #fff; }
   #gadmin .rightPanel .top-menu {
     background-color: #fff;
     max-height: 56px;
@@ -128,6 +128,8 @@
       #gadmin .rightPanel .top-menu .navbar button.navbar-toggler.collapsed {
         background-color: transparent;
         color: #fff; }
+  #gadmin .rightPanel .container {
+    padding-top: 15px; }
 
 #gadmin .rightPanelIco {
   width: 100% !important;
@@ -140,8 +142,6 @@
   #gadmin .rightPanelIco .top-menu {
     margin-left: 70px;
     width: calc( 100% - 70px) !important; }
-  #gadmin .rightPanelIco .container {
-    padding-top: 15px; }
 
 @media (max-width: 767.98px) {
   #gadmin .rightPanel, #gadmin .rightPanelIco {
@@ -200,6 +200,63 @@
 
 .b-8x {
   border-width: 8px; }
+
+.bg-violet {
+  background-color: #813788 !important;
+  color: #fff; }
+
+.card-clickable {
+  -moz-box-shadow: 0px 2px 4px rgba(3, 27, 78, 0.2);
+  -ms-box-shadow: 0px 2px 4px rgba(3, 27, 78, 0.2);
+  -o-box-shadow: 0px 2px 4px rgba(3, 27, 78, 0.2);
+  -webkit-box-shadow: 0px 2px 4px rgba(3, 27, 78, 0.2);
+  box-shadow: 0px 2px 4px rgba(3, 27, 78, 0.2);
+  cursor: pointer;
+  transition: box-shadow .25s linear; }
+  .card-clickable:hover {
+    -moz-box-shadow: 0px 10px 20px rgba(3, 27, 78, 0.3);
+    -ms-box-shadow: 0px 10px 20px rgba(3, 27, 78, 0.3);
+    -o-box-shadow: 0px 10px 20px rgba(3, 27, 78, 0.3);
+    -webkit-box-shadow: 0px 10px 20px rgba(3, 27, 78, 0.3);
+    box-shadow: 0px 10px 20px rgba(3, 27, 78, 0.3); }
+
+.card-module {
+  position: relative;
+  overflow: hidden;
+  max-height: 150px;
+  height: 135px; }
+  .card-module .card-body {
+    z-index: 2;
+    padding-right: 90px;
+    padding-bottom: 0; }
+  .card-module .card-icon {
+    height: 125px;
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-left: 5px solid rgba(0, 0, 0, 0.05) !important;
+    border-top: 5px solid rgba(0, 0, 0, 0.05) !important;
+    border-radius: 100% 0 0 0; }
+    .card-module .card-icon:after {
+      background-image: url("");
+      border-radius: 100% 0 0 0;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      opacity: .15;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0; }
+    .card-module .card-icon svg {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      transition: transform 1s ease-in-out; }
+  .card-module:hover .card-icon svg {
+    transform: scale(1.1); }
 
 #gadmin {
   font-family: 'Ubuntu', sans-serif;

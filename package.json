@@ -8,8 +8,9 @@
     "sass-watch": "gulp app-sass:watch",
     "js-watch": "gulp app-js:watch",
     "html-watch": "gulp build-html:watch",
+    "img-watch": "gulp build-img:watch",
     "build": "gulp build",
-    "dev": "concurrently \"npm run html-watch\" \"npm run js-watch\" \"npm run sass-watch\" "
+    "dev": "concurrently \"npm run html-watch\" \"npm run js-watch\" \"npm run sass-watch\" \"npm run img-watch\""
   },
   "repository": {
     "type": "git",
