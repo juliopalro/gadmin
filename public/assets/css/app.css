@@ -21,7 +21,8 @@
   #gadmin .leftPanel .title-dashboard {
     border-bottom: 1px solid #e9ecef;
     padding: 15px 0 10px 0;
-    min-height: 56px; }
+    min-height: 56px;
+    background-color: #fff; }
     #gadmin .leftPanel .title-dashboard .title-ico {
       color: #007bff; }
   #gadmin .leftPanel .menu-primary .nav-link {
@@ -83,18 +84,24 @@
     .leftPanel .leftMenu {
       width: 50% !important;
       height: 100% !important; }
-    .leftPanel .title-dashboard .title-ico {
-      display: none; }
-    .leftPanel.hiddenLarge .title-dashboard .title-ico {
-      display: inline-block !important; }
-    .leftPanel.hiddenLarge .title-dashboard .title-name {
-      display: inline-block !important; } }
+    .leftPanel .title-dashboard {
+      width: 50% !important; }
+      .leftPanel .title-dashboard .title-ico {
+        display: none; }
+    .leftPanel.hiddenLarge .title-dashboard {
+      width: 50% !important; }
+      .leftPanel.hiddenLarge .title-dashboard .title-ico {
+        display: inline-block !important; }
+      .leftPanel.hiddenLarge .title-dashboard .title-name {
+        display: inline-block !important; } }
 
 @media (max-width: 575.98px) {
   .leftPanel .leftMenu {
     width: 60% !important; }
-  .leftPanel .title-dashboard .title-ico {
-    display: none; } }
+  .leftPanel .title-dashboard {
+    width: 60% !important; }
+    .leftPanel .title-dashboard .title-ico {
+      display: none; } }
 
 #gadmin .rightPanel {
   height: 100%;
