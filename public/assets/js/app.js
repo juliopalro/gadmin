@@ -30,7 +30,7 @@ $("#leftMenu").on("click",function(event) {
 });
 
 // mostrar y ocultar la lista de enlaces secundarios del menú
-$("#leftMenu").on("click", ".menu-primary .nav-list",function(event) {
+$("#leftMenu").on("click", ".menu-primary .nav-list a",function(event) {
   event.preventDefault();
-  $(this).toggleClass('hidden-list');
+  $(this).parent().toggleClass('hidden-list');
 });

@@ -54,5 +54,9 @@ gulp.task('build-html:watch', function () {
     gulp.watch(['./src/html/*.html'], ['build-html']);
 });
 
+gulp.task('build-img', function() {
+  return gulp.src('./src/img/*')
+    .pipe(gulp.dest('./public/img'));
+});
 
-gulp.task('build', ['build-html', 'build-js', 'build-css', 'app-sass', 'app-js']);
+gulp.task('build', ['build-html', 'build-js', 'build-css', 'build-img', 'app-sass', 'app-js']);
