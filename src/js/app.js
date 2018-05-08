@@ -1,8 +1,8 @@
 /*Script for gadmin*/
 
-$( "#gadmin" ).on( "click", "button.navLeftToggler", function(event) {
+$( "#gadmin" ).on( "click", "button.navLeftToggleLarge", function(event) {
   event.preventDefault();
-  $("#leftPanel").toggleClass('leftPanelIco');
+  $("#leftPanel").toggleClass('hiddenLarge');
   $("#rightPanel").toggleClass('rightPanelIco');
   $(this).toggleClass('active');
 });
