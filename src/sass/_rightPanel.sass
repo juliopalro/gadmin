@@ -1,15 +1,17 @@
 #gadmin
   .rightPanel
     height: 100%
-    position: fixed
     width: calc( 100% - #{$maxWidthLleftPanel})
     margin-left: $maxWidthLleftPanel
     background-color: $white
     .top-menu
       background-color: $white
-      max-height: $maxHeightTitle
-      height: $maxHeightTitle
       border-bottom: 1px solid $gray-300
+      height: $maxHeightTitle
+      max-height: $maxHeightTitle
+      position: fixed
+      top: 0
+      width: 100%
       .navbar
         .navLeftToggleLarge, .navLeftToggleSmall
           padding: .25rem .75rem
@@ -29,6 +31,8 @@
             color: $white
     .container
       padding-top: 15px
+      margin-top: 56px
+      width: 100% !important
   .rightPanelIco
     width: 100% !important
     margin-left: 0
